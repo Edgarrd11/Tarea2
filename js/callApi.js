@@ -1,6 +1,7 @@
 
 let button = document.getElementById('button')
 var randPoke = Math.floor(Math.random()*150)+1
+let input = document.querySelector('input')
 
 function ajaxCall(id) {
     let img = document.getElementById('img')
@@ -17,10 +18,17 @@ function ajaxCall(id) {
             p.textContent = datoPokemon.name
             }
         }
+        document.getElementById('caja').value = ""
 }
 
 ajaxCall(randPoke)
+
+input.addEventListener('keyup', (e) => {
+    if(e.keyCode === 13) {
+        ajaxCall(e.target.value)  
+    }
+})
+
 button.addEventListener('click',() => {
-    let caja = document.getElementById('caja').value
-    ajaxCall(caja)  
+    ajaxCall(document.getElementById('caja').value)  
 })
