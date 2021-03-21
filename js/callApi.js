@@ -1,4 +1,6 @@
+
 let buton = document.getElementById('button')
+
 buton.addEventListener('click',() => {
     let caja = document.getElementById('caja').value
     let img = document.getElementById('img')
