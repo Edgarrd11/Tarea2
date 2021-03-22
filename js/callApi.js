@@ -1,11 +1,12 @@
 
 let button = document.getElementById('button')
-var randPoke = Math.floor(Math.random()*150)+1
+var randPoke = Math.floor(Math.random()*151)+1
 let input = document.querySelector('input')
 
 function ajaxCall(id) {
     let img = document.getElementById('img')
     let p = document.getElementById('info')
+
     let xhttp = new XMLHttpRequest()
                 
     xhttp.open("GET",`https://pokeapi.co/api/v2/pokemon/${id}`)

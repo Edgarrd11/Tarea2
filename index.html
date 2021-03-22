@@ -40,6 +40,9 @@
            margin: 40px auto;
            display: inline-block;
        }
+       p::first-letter{
+           text-transform: uppercase;
+       }
        p{
            margin-top: -120px;
            font-size: xx-large;
@@ -67,6 +70,7 @@
     <input type="text" id="caja" placeholder="Número de pokemon">
     <button class="text-white btn bg-danger" id="button">Buscar</button>
     <p id="info" class="text-white"></p>
+   
 </div>
 </body>
 <!-- Llamada por AJAX con Script separado -->
